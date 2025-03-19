@@ -43,7 +43,7 @@ const ShoppingCart = () => {
 
       <section className="cart-section">
         {getData.length === 0 ? (
-          <div className="cart-empty-message text-center text-white"><img src="/images/empty_cart.jpg"></img></div>
+          <div className="cart-empty-message text-center text-white"><img src={`${process.env.PUBLIC_URL}/images/empty_cart.jpg`}></img></div>
         ) : (
           getData.map((item) => (
             <div key={item.id} className="itemDetails">

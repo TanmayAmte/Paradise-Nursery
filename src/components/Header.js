@@ -15,7 +15,7 @@ const Header = () => {
       <Navbar bg="primary" data-bs-theme="dark" style={{height:60}}>
         <Container>
         <NavLink to="/" className="text-decoration-none text-light mx-3" style={{fontSize:40, marginRight:40, marginLeft:-30}}><img 
-              src="/images/logo.jpg" 
+              src={`${process.env.PUBLIC_URL}/images/logo.jpg`} 
               alt="Logo" 
               style={{ height: 50, width: 50, borderRadius: "50%", marginRight: 10, marginBottom: 5 }}
             />OnlyPlants</NavLink>

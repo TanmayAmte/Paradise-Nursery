@@ -7,11 +7,12 @@ import {BrowserRouter} from 'react-router-dom';
 import store from './store';
 import {Provider} from 'react-redux';//we provide values of our store to all component via this
 
+const isGitHubPages = window.location.hostname.includes("github.io");
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename={isGitHubPages ? "/Paradise-Nursery" : "/"}>
     <React.StrictMode>
       <App />
     </React.StrictMode>
